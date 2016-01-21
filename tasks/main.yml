@@ -5,17 +5,17 @@
      yum: name={{ item }} state=present update_cache=yes
      with_items:
      - logwatch
-   - name: Setup mail to which daily reports are sent
+   - name: Sent address
      lineinfile: dest=/usr/share/logwatch/default.conf/logwatch.conf regexp=^MailTo line="MailTo = user@domain.com"
-   - name: Setup an address to which daily reports sent from	
+   - name: Mail Origin	
      lineinfile: dest=/usr/share/logwatch/default.conf/logwatch.conf regexp=^MailFrom line="MailFrom = Logwatch"
-   - name: Setup range for reports
+   - name: Range
      lineinfile: dest=/usr/share/logwatch/default.conf/logwatch.conf regexp=^Range line="Range = yesterday"
    - name: Reports in detail
      lineinfile: dest=/usr/share/logwatch/default.conf/logwatch.conf regexp=^Detail line="Detail = Low"
-   - name: List services
+   - name: Services
      lineinfile: dest=/usr/share/logwatch/default.conf/logwatch.conf regexp=^Service line="Service = All"
-   - name: Report frequency
+   - name: Frequency
      lineinfile: dest=/usr/share/logwatch/default.conf/logwatch.conf regexp=^DailyReport line="DailyReport = yes"
    - name: Run LogWatch
      command: logwatch --detail Low --mailto username@domain.com --range yesterday
