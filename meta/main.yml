@@ -1,0 +1,10 @@
+---
+galaxy_info:
+  author: Shibin MK
+  description: 
+  company: 
+  license: GNU
+  min_ansible_version: 1.9
+  platforms:
+  - name: EL
+  
