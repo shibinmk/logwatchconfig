@@ -26,11 +26,11 @@ No dependencies
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+Here is how a sample playbook looks like:
 
     - hosts: servers
       roles:
-         - { role: username.logwatchconfig }
+         - { role: shibinmk.logwatchconfig }
 
 License
 -------
@@ -38,4 +38,7 @@ License
 GNU
 
 Author Information
-Shibin  (shibinarayan@gmail.com)
+------------------
+
+Shibin
+shibinarayan@gmail.com
